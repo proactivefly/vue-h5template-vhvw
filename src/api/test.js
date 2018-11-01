@@ -2,7 +2,7 @@ import request from '@/utils/request.js'
 
 export function list(){
 	return request({
-	    url: 'vehicle/busBizLocation/list',
+	    url: '',
 	    method: 'post',
 	    data:params
 	})

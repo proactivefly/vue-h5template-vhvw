@@ -5,11 +5,11 @@ import '@/styles/index.styl'
 import '@/permission.js'//路由守卫
 import store from './store'
 import utils from '@/utils/index.js'
+var hacks = require('viewport-units-buggyfill/viewport-units-buggyfill.hacks');
+require('viewport-units-buggyfill').init({
+  hacks: hacks
+});
 Vue.use(utils);
-import 'lib-flexible'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
-Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
