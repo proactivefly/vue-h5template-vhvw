@@ -5,7 +5,7 @@ module.exports = {
     "postcss-import": {},
     "postcss-url": {},
     // to edit target browsers: use "browserslist" field in package.json
-    "postcss-aspect-ratio-mini":{},
+    "postcss-aspect-ratio-mini":{},//處理元素容器寬高比
     "postcss-write-svg":{
       utf8:false
     },
@@ -16,7 +16,7 @@ module.exports = {
       unitPrecision: 3, // px 转 视窗单位的 小数位数
       viewportUnit: 'vw', // 希望转成哪种视窗单位  推荐vw
       selectorBlackList: ['.ignore', '.hairlines'], //指定不转换为视窗单位的类，可以自定义，可以无限添加,建议定义一至两个通用的类名,hairlines一般用于设置border-width:0.5px的元素中著作权归作者所有。
-      minPixelValue: 1, // (Number) Set the minimum pixel value to replace.
+      minPixelValue: 1, // 小于等于1的px单位不转vhvw
       mediaQuery: false // (Boolean) Allow px to be converted in media queries.
     },
     "postcss-viewport-units":{},

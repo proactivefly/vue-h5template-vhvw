@@ -5,6 +5,7 @@ import '@/styles/index.styl'
 import '@/permission.js'//路由守卫
 import store from './store'
 import utils from '@/utils/index.js'
+// viewport hack tools
 var hacks = require('viewport-units-buggyfill/viewport-units-buggyfill.hacks');
 require('viewport-units-buggyfill').init({
   hacks: hacks
