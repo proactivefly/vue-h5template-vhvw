@@ -2,6 +2,8 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
+const PostCompilePlugin = require('webpack-post-compile-plugin')
+const TransformModulesPlugin = require('webpack-transform-modules-plugin')
 const vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {
@@ -78,5 +80,10 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  plugins: [
+    // cube-ui 后编译
+    new PostCompilePlugin(),
+    new TransformModulesPlugin()
+  ]
 }
